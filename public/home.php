@@ -1,6 +1,8 @@
 <?php	
  
  include("../infra/db/connect.php");
+ session_start();
+
 
 
  
@@ -17,7 +19,11 @@
 
         if(!empty($usuario) && !empty($senha)){
   
-      $sql = "INSERT INTO usuario (usuario, senha) VALUES ('$usuario', '$senha') ";
+      $sql = "INSERT INTO usuario (usuario, senha) VALUES (?, ?) ";
+      $stmt = $conn->prepare($sql);
+      $stmt->bind_param("ss", $usuario, $senha);
+      $stmt->execute();
+  
   
   
       if($conn -> query($sql) === TRUE){
@@ -34,18 +40,24 @@
         $descricao = $_POST["descricao"] ?? "";
         $preco = $_POST["preco"] ?? "";
         $categoria = $_POST["categoria"] ?? "";
+        $id = $_SESSION["usuario_id"];
+
+
 
 
         if(!empty($nome) && !empty($descricao) && !empty($preco) && !empty($categoria)){
   
-      $sql = "INSERT INTO pratos (nome, descricao, preco, categoria) VALUES ('$nome', '$descricao', '$preco', '$categoria') ";
-  
-  
-      if($conn -> query($sql) === TRUE){
-            echo "<script>alert('Prato Cadastrado com sucesso!')</script>";
-      }else{
-            echo "<script>alert('Erro Prato Não Cadastrado!')</script>";
-      }
+      $sql = "INSERT INTO pratos (nome, descricao, preco, categoria, usuario_id) VALUES (?, ?, ?, ?, ?)";
+      $stmt = mysqli_prepare($conn, $sql);
+      mysqli_stmt_bind_param($stmt, "ssssi", $nome, $descricao, $preco, $categoria, $id);
+
+        if (mysqli_stmt_execute($stmt)) {
+            echo "<script>alert('Prato cadastrado com sucesso!')</script>";
+        } else {
+            echo "<script>alert('Erro: prato não cadastrado!')</script>";
+        }
+
+        mysqli_stmt_close($stmt);
       }
 
     }

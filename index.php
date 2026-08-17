@@ -1,6 +1,7 @@
 
 <?php
 include("infra/db/connect.php");
+session_start();
 
 
 
@@ -9,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
 
-
+  
 
     $sql = "SELECT * FROM usuario 
     WHERE usuario = '$usuario' 
@@ -19,7 +20,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     if($resultado -> num_rows > 0){
+        $dadosUsuario = $resultado->fetch_assoc();
         $_SESSION["usuario"] = $usuario;
+        $_SESSION["usuario_id"] = $dadosUsuario["id"];
         header("Location: public/home.php");
         exit();
     }else{
