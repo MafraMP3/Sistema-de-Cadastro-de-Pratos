@@ -28,6 +28,27 @@
       }
 
     }
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $nome = $_POST["nome"] ?? "";
+        $descricao = $_POST["descricao"] ?? "";
+        $preco = $_POST["preco"] ?? "";
+        $categoria = $_POST["categoria"] ?? "";
+
+
+        if(!empty($nome) && !empty($descricao) && !empty($preco) && !empty($categoria)){
+  
+      $sql = "INSERT INTO pratos (nome, descricao, preco, categoria) VALUES ('$nome', '$descricao', '$preco', '$categoria') ";
+  
+  
+      if($conn -> query($sql) === TRUE){
+            echo "<script>alert('Prato Cadastrado com sucesso!')</script>";
+      }else{
+            echo "<script>alert('Erro Prato Não Cadastrado!')</script>";
+      }
+      }
+
+    }
 ?>
 
 <html lang="en">
@@ -58,10 +79,35 @@
 
     </form>
 
+    <h2>Cadastrar Pratos</h2>
+   
+    <form method="POST">
+
+      <label for="nome">Nome</label>
+      <input type="text" name="nome">
+      <br>
+      <br>
+      <label for="descricao">Descrição</label>
+      <input type="text" name="descricao">
+      <br>
+      <br>
+      <label for="preco">Preço</label>
+      <input type="text" name="preco">
+      <br>
+      <br>
+      <label for="categoria">Categoria</label>
+      <input type="text" name="categoria">
+      <button type="submit">Enviar</button> 
+      <br>
+
+    </form>
+
+
 
 
     <?php
     include("../public/component/table.php"); 
+    
     ?>
 
   <a href="logout.php">Sair</a>
