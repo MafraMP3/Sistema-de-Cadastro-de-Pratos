@@ -17,20 +17,22 @@
         $senha = $_POST["senha"] ?? "";
 
 
-        if(!empty($usuario) && !empty($senha)){
+    if(!empty($usuario) && !empty($senha)){
   
       $sql = "INSERT INTO usuario (usuario, senha) VALUES (?, ?) ";
-      $stmt = $conn->prepare($sql);
-      $stmt->bind_param("ss", $usuario, $senha);
-      $stmt->execute();
-  
-  
-  
-      if($conn -> query($sql) === TRUE){
-            echo "<script>alert('Usuário Cadastrado com sucesso!')</script>";
-      }else{
-            echo "<script>alert('Erro Usuário Não Cadastrado!')</script>";
-      }
+
+      $stmt = mysqli_prepare($conn, $sql);
+
+      mysqli_stmt_bind_param($stmt, "ss", $usuario, $senha);
+
+        if (mysqli_stmt_execute($stmt)) {
+            echo "<script>alert('Usuário cadastrado com sucesso!')</script>";
+        } else {
+            echo "<script>alert('Erro: Usuário não cadastrado!')</script>";
+        }
+
+        mysqli_stmt_close($stmt);
+      
       }
 
     }
