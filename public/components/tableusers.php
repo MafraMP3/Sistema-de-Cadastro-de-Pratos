@@ -2,7 +2,7 @@
 
 <h4>  Usuarios cadastrados  </h4>
 
-<table border="1" cellpadding="10">
+<table  class="table table-striped table-hover">
     
  <tr>
     <th>ID</th>

@@ -73,31 +73,10 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-   
+<div class ="container">
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
 
-    <h2>Cadastrar usuario</h2>
-   
-    <form method="POST">
-
-      <label for="usuario">Usuario</label>
-      <input type="text" name="usuario">
-      <br>
-      <br>
-      <label for="senha">Senha</label>
-      <input type="password" name="senha">
-      <br>
-      <br>
-      <button type="submit">Enviar</button> 
-      <br>
-
-    </form>
-        <?php
-    include("../public/components/tableusers.php"); 
-    
-    ?>
-
-    <h2>Cadastrar Pratos</h2>
+  <h2>Cadastrar Pratos</h2>
    
     <form method="POST">
 
@@ -125,6 +104,29 @@
     
     ?>
 
+    <h2>Cadastrar usuario</h2>
+   
+    <form method="POST">
+
+      <label for="usuario">Usuario</label>
+      <input type="text" name="usuario">
+      <br>
+      <br>
+      <label for="senha">Senha</label>
+      <input type="password" name="senha">
+      <br>
+      <br>
+      <button type="submit">Enviar</button> 
+      <br>
+
+    </form>
+        <?php
+    include("../public/components/tableusers.php"); 
+    
+    ?>
+
+    
+</div>
 
 
 
