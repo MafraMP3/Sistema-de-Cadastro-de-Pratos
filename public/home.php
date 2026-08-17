@@ -90,6 +90,10 @@
       <br>
 
     </form>
+        <?php
+    include("../public/components/tableusers.php"); 
+    
+    ?>
 
     <h2>Cadastrar Pratos</h2>
    
@@ -114,13 +118,13 @@
 
     </form>
 
-
-
-
-    <?php
-    include("../public/component/table.php"); 
+        <?php
+    include("../public/components/tableprato.php"); 
     
     ?>
+
+
+
 
   <a href="logout.php">Sair</a>
 <script src=".../script.js"></script>
