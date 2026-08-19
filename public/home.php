@@ -99,8 +99,15 @@
       <br>
       <label for="categoria">Categoria</label>
       <br>
-      <input type="text" name="categoria">
-      <button type="submit">Enviar</button> 
+      <select name="categoria" id="categoria">
+        <option value="entrada">Entrada</option>
+        <option value="prato-principal">Prato Principal</option>
+        <option value="sobremesa">Sobremesa</option>
+        <option value="bebida">Bebida</option>
+    </select>
+      <br>
+      <br>
+      <button type="button" class="btn btn-warning" type="submit">Enviar</button> 
       <br>
 
     </form>
