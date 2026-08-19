@@ -76,23 +76,29 @@
 <div class ="container">
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
 
+ <hr>
+
   <h2>Cadastrar Pratos</h2>
    
     <form method="POST">
-
+      
       <label for="nome">Nome</label>
+      <br>
       <input type="text" name="nome">
       <br>
       <br>
       <label for="descricao">Descrição</label>
+      <br>
       <input type="text" name="descricao">
       <br>
       <br>
       <label for="preco">Preço</label>
+      <br>
       <input type="text" name="preco">
       <br>
       <br>
       <label for="categoria">Categoria</label>
+      <br>
       <input type="text" name="categoria">
       <button type="submit">Enviar</button> 
       <br>
@@ -104,15 +110,19 @@
     
     ?>
 
+    <hr>
+
     <h2>Cadastrar usuario</h2>
    
     <form method="POST">
 
       <label for="usuario">Usuario</label>
+      <br>
       <input type="text" name="usuario">
       <br>
       <br>
       <label for="senha">Senha</label>
+      <br>
       <input type="password" name="senha">
       <br>
       <br>
