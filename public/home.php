@@ -73,73 +73,97 @@
 <body>
 <div class ="container ">
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
+ <hr class="border border-danger border-2 opacity-50">
 
  
  <div class="container "> 
- <div class =" p-2">
+ <div class ="card m-4 p-2 shadow-sm p-3 mb-5 bg-body rounded">
   <div>
-  <p class="text-center h2"> Pratos Cadastrados <p>
+  <p class="text-center b-3 h2"> Cadastrar Pratos <p>
    </div>
-   <div >
+   <div class="d-flex justify-content-around">
     <form method="POST">
       
-      <label for="nome">Nome</label>
-     
-      <input type="text" name="nome">
-      
-      <label for="descricao">Descrição</label>
-      
-      <input type="text" name="descricao">
-      
-      
-      <label for="preco">Preço</label>
-      
-      <input type="text" name="preco">
-      
-      <label for="categoria">Categoria</label>
-   
-      <select name="categoria" id="categoria">
-        <option value="entrada">Entrada</option>
-        <option value="prato-principal">Prato Principal</option>
-        <option value="sobremesa">Sobremesa</option>
-        <option value="bebida">Bebida</option>
-    </select>
-   
-      <button  type="submit">Enviar</button> 
-  
+      <div class="row gx-5">
+
+        <div class="col-md-3">
+            <label class="form-label" for="nome">Nome</label>
+            <input class="form-control" type="text" name="nome">
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label" for="descricao">Descrição</label>
+            <input class="form-control" type="text" name="descricao">
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label" for="preco">Preço</label>
+            <input class="form-control" type="text" name="preco">
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label" for="categoria">Categoria</label>
+            <select class="form-select" name="categoria">
+                <option value="entrada">Entrada</option>
+                <option value="prato-principal">Prato Principal</option>
+                <option value="sobremesa">Sobremesa</option>
+                <option value="bebida">Bebida</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-outline-dark" type="submit">
+            Enviar
+        </button>
+    </div>
+
 
     </form>
     </div>
 </div>
-<div class="card p-3 pb-0 pt-2">
+<div class="shadow-sm p-3 mb-5 bg-body card m-4   pb-0 pt-2">
         <?php
     include("../public/components/tableprato.php"); 
     
     ?>
 </div>
 </div>
-    <br>
 
-  <div class="container">
-    <div>
-    <p class="text-center h2"> Usuarios Cadastrados <p>
+<hr class="border border-danger border-2 opacity-50">
+
+  <div class="container ">
+    <div class ="card m-4 p-2 shadow-sm p-3 mb-5 bg-body rounded">
+      <div>
+    <p class="text-center mt-2 h2"> Usuarios Cadastrados <p>
    </div>
-   <div>
+   <div class="d-flex justify-content-around">
     <form method="POST">
 
-      <label for="usuario">Usuario</label>
-      
-      <input type="text" name="usuario">
-    
-      <label for="senha">Senha</label>
-     
-      <input type="password" name="senha">
-     
-      <button type="submit">Enviar</button> 
+      <div class="row gx-5">
 
+        <div class="col-md-6">
+            <label class="form-label" for="usuario">Usuário</label>
+            <input class="form-control" type="text" name="usuario">
+        </div>
+
+        <div class="col-md-6">
+            <label class="form-label" for="senha">Senha</label>
+            <input class="form-control" type="password" name="senha">
+        </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-outline-dark" type="submit">
+            Enviar
+        </button>
+    </div>
     </form>
     </div>
-    <div class="card">
+    </div>
+    <div class="shadow-sm p-3 mb-5 bg-body card m-4  pb-0 pt-2">
         <?php
     include("../public/components/tableusers.php"); 
     
@@ -149,7 +173,7 @@
 
     
 </div>
-
+<hr class="border border-danger border-2 opacity-50">
 
 
   <a href="logout.php">Sair</a>

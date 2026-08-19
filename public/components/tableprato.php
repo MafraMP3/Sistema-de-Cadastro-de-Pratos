@@ -2,7 +2,7 @@
 
 <h4>  Pratos cadastrados  </h4>
 
-<table class="table table-striped table-hover m-0 ">
+<table class="table  table-hover m-0 ">
     
  <tr>
     <th>ID</th>
@@ -11,6 +11,8 @@
     <th>Preço</th>
     <th>Categoria</th>
     <th>ID do usuario</th>
+    <th></th>
+    <th></th>
 
  </tr>
 
