@@ -1,6 +1,6 @@
 <hr>
 
-<h4>  Usuarios cadastrados  </h4>
+<h4>  Pratos cadastrados  </h4>
 
 <table class="table table-striped table-hover">
     
@@ -29,7 +29,7 @@
             <td>" . $linha["descricao"] . "</td>
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["categoria"] . "</td>
-            <td> <a href='editar.php?id=". $linha["id"] ."'>Editar</td>
+            <td> <a href='editar_prato.php?id=". $linha["id"] ."'>Editar</td>
             <td> <a href='excluir.php?id=". $linha["id"] ."'>Excluir</td>            
 
 
