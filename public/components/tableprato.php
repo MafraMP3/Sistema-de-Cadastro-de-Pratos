@@ -1,6 +1,6 @@
 <hr>
 
-<h4>  Usuarios cadastrados  </h4>
+<h4>  Pratos cadastrados  </h4>
 
 <table class="table table-striped table-hover">
     
@@ -37,6 +37,8 @@
 
     }
 ?>
+
+
 
 
 </table>
