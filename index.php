@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <input class="form-control" type="password" name="senha">
    
        <div class="d-grid gap-2 mt-4">
-        <button class="btn btn-outline-warning" type="submit">
+        <button class="btn btn-outline-danger" type="submit">
             Enviar
         </button>
     </div>
