@@ -78,7 +78,7 @@
  <div class="container "> 
  <div class =" p-2">
   <div>
-  <p class="text-center h2"> Pratos Cadastrados <p>
+  <p class="text-center h2"> Cadastro de Pratos <p>
    </div>
    <div >
     <form method="POST">
@@ -122,7 +122,7 @@
     
   <div class="container">
     <div>
-    <h2>Cadastrar usuario</h2>
+    <h2>Cadastro de Usuários</h2>
    </div>
    <div>
     <form method="POST">
