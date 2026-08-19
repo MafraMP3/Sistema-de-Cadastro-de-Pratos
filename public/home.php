@@ -99,17 +99,16 @@
       <input type="text" name="preco">
       
       <label for="categoria">Categoria</label>
-      <br>
+   
       <select name="categoria" id="categoria">
         <option value="entrada">Entrada</option>
         <option value="prato-principal">Prato Principal</option>
         <option value="sobremesa">Sobremesa</option>
         <option value="bebida">Bebida</option>
     </select>
-      <br>
-      <br>
-      <button type="button" class="btn btn-warning" type="submit">Enviar</button> 
-      <br>
+   
+      <button  type="submit">Enviar</button> 
+  
 
     </form>
     </div>
@@ -121,10 +120,11 @@
     ?>
 </div>
 </div>
-    
+    <br>
+
   <div class="container">
     <div>
-    <h2>Cadastrar usuario</h2>
+    <p class="text-center h2"> Usuarios Cadastrados <p>
    </div>
    <div>
     <form method="POST">
