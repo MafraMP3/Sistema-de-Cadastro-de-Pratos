@@ -26,10 +26,9 @@
       mysqli_stmt_bind_param($stmt, "ss", $usuario, $senha);
 
         if (mysqli_stmt_execute($stmt)) {
-            echo "<script>alert('Usuário cadastrado com sucesso!')</script>";
-        } else {
-            echo "<script>alert('Erro: Usuário não cadastrado!')</script>";
-        }
+    header("Location: home.php");
+    exit();
+}
 
         mysqli_stmt_close($stmt);
       
@@ -54,10 +53,9 @@
       mysqli_stmt_bind_param($stmt, "ssssi", $nome, $descricao, $preco, $categoria, $id);
 
         if (mysqli_stmt_execute($stmt)) {
-            echo "<script>alert('Prato cadastrado com sucesso!')</script>";
-        } else {
-            echo "<script>alert('Erro: prato não cadastrado!')</script>";
-        }
+    header("Location: home.php");
+    exit();
+}
 
         mysqli_stmt_close($stmt);
       }
@@ -108,7 +106,7 @@
     </select>
       <br>
       <br>
-      <button type="button" class="btn btn-warning" type="submit">Enviar</button> 
+      <button  type="submit">Enviar</button> 
       <br>
 
     </form>
