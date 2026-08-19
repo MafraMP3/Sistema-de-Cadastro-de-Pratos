@@ -30,7 +30,7 @@
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["categoria"] . "</td>
             <td> <a href='editar_prato.php?id=". $linha["id"] ."'>Editar</td>
-            <td> <a href='excluir_prato.php?id=". $linha["id"] ."'>Excluir</td>            
+            <td> <a href='excluir.php?id=". $linha["id"] ."'>Excluir</td>            
 
 
         </tr>";
