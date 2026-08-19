@@ -1,8 +1,8 @@
-<hr>
+
 
 <h4>  Pratos cadastrados  </h4>
 
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover m-0 ">
     
  <tr>
     <th>ID</th>
@@ -10,6 +10,7 @@
     <th>Descrição</th>
     <th>Preço</th>
     <th>Categoria</th>
+    <th>ID do usuario</th>
 
  </tr>
 
@@ -29,8 +30,9 @@
             <td>" . $linha["descricao"] . "</td>
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["categoria"] . "</td>
+            <td>" . $linha["usuario_id"] . "</td>
             <td> <a href='editar_prato.php?id=". $linha["id"] ."'>Editar</td>
-            <td> <a href='excluir.php?id=". $linha["id"] ."'>Excluir</td>            
+            <td> <a href='excluir_prato.php?id=". $linha["id"] ."'>Excluir</td>            
 
 
         </tr>";

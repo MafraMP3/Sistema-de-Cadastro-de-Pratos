@@ -27,7 +27,8 @@
       mysqli_stmt_bind_param($stmt, "ssssi", $novoNome, $novaDescricao, $novoPreco, $novaCategoria, $id);
 
         if (mysqli_stmt_execute($stmt)) {
-            echo "<script>alert('Prato cadastrado com sucesso!')</script>";
+            header("Location: home.php");
+            exit();
         } else {
             echo "<script>alert('Erro: prato não cadastrado!')</script>";
         }
@@ -60,21 +61,21 @@
 
     <h2> Editar Prato </h2>
 
-    <form action="home.php " method="POST">
+    <form action="editar_prato.php?id=<?php echo $id; ?>" method="POST">
         <label for="nome">Nome</label>
-      <input type="text" name="nome">
+      <input type="text" name="nome" value="<?php echo $prato['nome']; ?>">
       <br>
       <br>
       <label for="descricao">Descrição</label>
-      <input type="text" name="descricao">
+      <input type="text" name="descricao" value="<?php echo $prato['descricao']; ?>">
       <br>
       <br>
       <label for="preco">Preço</label>
-      <input type="text" name="preco">
+      <input type="text" name="preco" value="<?php echo $prato['preco']; ?>">
       <br>
       <br>
       <label for="categoria">Categoria</label>
-      <input type="text" name="categoria">
+      <input type="text" name="categoria" value="<?php echo $prato['categoria']; ?>">
       <button  type="submit">Enviar </button> 
       <br>
     </form>

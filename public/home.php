@@ -73,67 +73,74 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<div class ="container">
+<div class ="container ">
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
 
- <hr>
-
-  <h2>Cadastrar Pratos</h2>
-   
+ 
+ <div class="container "> 
+ <div class =" p-2">
+  <div>
+  <p class="text-center h2"> Pratos Cadastrados <p>
+   </div>
+   <div >
     <form method="POST">
       
       <label for="nome">Nome</label>
-      <br>
+     
       <input type="text" name="nome">
-      <br>
-      <br>
+      
       <label for="descricao">Descrição</label>
-      <br>
+      
       <input type="text" name="descricao">
-      <br>
-      <br>
+      
+      
       <label for="preco">Preço</label>
-      <br>
+      
       <input type="text" name="preco">
-      <br>
-      <br>
+      
       <label for="categoria">Categoria</label>
-      <br>
+    
       <input type="text" name="categoria">
       <button type="submit">Enviar</button> 
-      <br>
+
 
     </form>
-
+    </div>
+</div>
+<div class="card p-3 pb-0 pt-2">
         <?php
     include("../public/components/tableprato.php"); 
     
     ?>
-
-    <hr>
-
+</div>
+</div>
+    
+  <div class="container">
+    <div>
     <h2>Cadastrar usuario</h2>
-   
+   </div>
+   <div>
     <form method="POST">
 
       <label for="usuario">Usuario</label>
-      <br>
+      
       <input type="text" name="usuario">
-      <br>
-      <br>
+    
       <label for="senha">Senha</label>
-      <br>
+     
       <input type="password" name="senha">
-      <br>
-      <br>
+     
       <button type="submit">Enviar</button> 
-      <br>
 
     </form>
+    </div>
+    <div class="card">
         <?php
     include("../public/components/tableusers.php"); 
     
     ?>
+    </div>
+    </div>
 
     
 </div>

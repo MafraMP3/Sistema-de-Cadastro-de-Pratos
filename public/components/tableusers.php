@@ -1,8 +1,8 @@
-<hr>
+
 
 <h4>  Usuarios cadastrados  </h4>
 
-<table  class="table table-striped table-hover">
+<table  class="table table-striped table-hover m-0">
     
  <tr>
     <th>ID</th>
