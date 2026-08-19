@@ -75,7 +75,12 @@
       <br>
       <br>
       <label for="categoria">Categoria</label>
-      <input type="text" name="categoria" value="<?php echo $prato['categoria']; ?>">
+      <select name="categoria" id="categoria">
+        <option value="entrada">Entrada</option>
+        <option value="prato-principal">Prato Principal</option>
+        <option value="sobremesa">Sobremesa</option>
+        <option value="bebida">Bebida</option>
+    </select>
       <button  type="submit">Enviar </button> 
       <br>
     </form>
