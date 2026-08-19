@@ -33,9 +33,19 @@
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["categoria"] . "</td>
             <td>" . $linha["usuario_id"] . "</td>
-            <td> <a href='editar_prato.php?id=". $linha["id"] ."'>Editar</td>
-            <td> <a href='excluir_prato.php?id=". $linha["id"] ."'>Excluir</td>            
+            <td>
+                <a href='editar_prato.php?id=" . $linha["id"] . "' 
+                   class='btn btn-outline-dark'>
+                    Editar
+                </a>
+            </td>
 
+            <td>
+                <a href='excluir_prato.php?id=" . $linha["id"] . "' 
+                   class='btn btn-outline-danger'>
+                    Excluir
+                </a>
+            </td>
 
         </tr>";
 

@@ -50,7 +50,7 @@
   
       $sql = "INSERT INTO pratos (nome, descricao, preco, categoria, usuario_id) VALUES (?, ?, ?, ?, ?)";
       $stmt = mysqli_prepare($conn, $sql);
-      mysqli_stmt_bind_param($stmt, "ssssi", $nome, $descricao, $preco, $categoria, $id);
+      mysqli_stmt_bind_param($stmt, "ssdsi", $nome, $descricao, $preco, $categoria, $id);
 
         if (mysqli_stmt_execute($stmt)) {
     header("Location: home.php");
@@ -71,13 +71,22 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+  
 <div class ="container ">
+  <div class="d-flex justify-content-between"> 
  <H2> Bem vindo, <?php echo $_SESSION["usuario"];?>.</H2>
+
+ <a href="logout.php">
+ <button type="button" class="btn btn-outline-danger">Sair</button>
+ </a>
+ </div>
+
  <hr class="border border-danger border-2 opacity-50">
+ 
 
  
  <div class="container "> 
- <div class ="card m-4 p-2 shadow-sm p-3 mb-5 bg-body rounded">
+ <div class ="card m-5 p-2 shadow-sm p-3 mb-5 bg-body rounded">
   <div>
   <p class="text-center b-3 h2"> Cadastrar Pratos <p>
    </div>
@@ -123,7 +132,7 @@
     </form>
     </div>
 </div>
-<div class="shadow-sm p-3 mb-5 bg-body card m-4   pb-0 pt-2">
+<div class="shadow-sm p-3 mb-5 bg-body card m-5   pb-0 pt-2">
         <?php
     include("../public/components/tableprato.php"); 
     
@@ -134,7 +143,7 @@
 <hr class="border border-danger border-2 opacity-50">
 
   <div class="container ">
-    <div class ="card m-4 p-2 shadow-sm p-3 mb-5 bg-body rounded">
+    <div class ="card m-5 p-2 shadow-sm p-3 mb-5 bg-body rounded">
       <div>
     <p class="text-center mt-2 h2"> Usuarios Cadastrados <p>
    </div>
@@ -163,7 +172,7 @@
     </form>
     </div>
     </div>
-    <div class="shadow-sm p-3 mb-5 bg-body card m-4  pb-0 pt-2">
+    <div class="shadow-sm p-3 mb-5 bg-body card m-5  pb-0 pt-2">
         <?php
     include("../public/components/tableusers.php"); 
     
@@ -176,7 +185,7 @@
 <hr class="border border-danger border-2 opacity-50">
 
 
-  <a href="logout.php">Sair</a>
+  
 <script src=".../script.js"></script>
 </body>
 </html>
