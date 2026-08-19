@@ -38,22 +38,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login com PHP</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <h2>Login</h2>
+  <div class=" position-absolute top-50 start-50 translate-middle b-0 " style="width: 18rem;">
+  <img src="images\Papa_Louie_Pals.webp" class="card-img-top b-0" alt="...">
+  <div class="card-body b-0">
+    <h5 class="card-title b-0">Login</h5>
+    <p class="card-text b-0">
+
     <form method="POST">
 
-    <label for="usuario">Usuario</label>
-    <input type="text" name="usuario">
-    <br>
-    <br>
-    <label for="senha">Senha</label>
-    <input type="password" name="senha">
-    <br>
-    <br>
-    <button type="submit">Entrar</button>
-
+    <label class="form-label" for="usuario">Usuario</label>
+    <input class="form-control" type="text" name="usuario">
+   
+    <label class="form-label" for="senha">Senha</label>
+    <input class="form-control" type="password" name="senha">
+   
+       <div class="d-grid gap-2 mt-4">
+        <button class="btn btn-outline-warning" type="submit">
+            Enviar
+        </button>
+    </div>
     </form>
+
+    </p>
+  </div>
+</div>
+
+    
+
 
     <?php
 
